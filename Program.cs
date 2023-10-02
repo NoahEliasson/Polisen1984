@@ -8,25 +8,31 @@ class Program
         List<string> Brott = new List<string>();
         System.Console.WriteLine("1. REGESTRERING AV UTRYCKNINGAR");
 
-        switch(Console.ReadLine())
+        Systemkrav.Utryckningar(Brott);
+        foreach(string item in Brott)
+        {
+            System.Console.WriteLine(item);
+        }
+
+       // switch(Console.ReadLine())
         {
 
-            case "1":
-            System.Console.WriteLine("Vad är det för brott?");
-            string brottlista = Console.ReadLine().ToLower();
-            Brott.Add(brottlista);
-            System.Console.WriteLine("Vilken plats?");
-            string platslista = Console.ReadLine().ToLower();
-            Brott.Add(platslista);
-            System.Console.WriteLine("Vilken tidpunkt?");
-            string tidlista = Console.ReadLine().ToLower();
-            Brott.Add(tidlista);
-            string datumlista = Console.ReadLine().ToLower();
-            System.Console.WriteLine("vilket datum?");
-            Brott.Add(datumlista);
-            foreach(string item in Brott)
-            System.Console.WriteLine(item);
-            break;
+            //case "1":
+            //System.Console.WriteLine("Vad är det för brott?");
+            //string brottlista = Console.ReadLine().ToLower();
+            //Brott.Add(brottlista);
+            //System.Console.WriteLine("Vilken plats?");
+            //string platslista = Console.ReadLine().ToLower();
+            //Brott.Add(platslista);
+            //System.Console.WriteLine("Vilken tidpunkt?");
+            //string tidlista = Console.ReadLine().ToLower();
+            //Brott.Add(tidlista);
+            //string datumlista = Console.ReadLine().ToLower();
+            //System.Console.WriteLine("vilket datum?");
+            //Brott.Add(datumlista);
+            //foreach(string item in Brott)
+            //System.Console.WriteLine(item);
+            //break;
         }
    
 
@@ -38,9 +44,11 @@ class Program
 class Systemkrav
 {
 
-    static void Utryckningar()
+    public static void Utryckningar(List<string> lista)
     {
-        
+        System.Console.WriteLine("Vad är det för brott?");
+            string brottlista = Console.ReadLine().ToLower();
+            lista.Add(brottlista);
     }
 
 
